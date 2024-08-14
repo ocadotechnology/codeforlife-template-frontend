@@ -1,0 +1,28 @@
+import * as page from "codeforlife/components/page"
+import { type FC } from "react"
+import { Image } from "codeforlife/components"
+import { Link } from "codeforlife/components/router"
+import { Typography } from "@mui/material"
+
+import CflLogoImage from "../../images/cfl_logo.png"
+import { paths } from "../../routes"
+
+export interface HomeProps {}
+
+const Home: FC<HomeProps> = () => {
+  return (
+    <page.Page>
+      <page.Section>
+        <Image src={CflLogoImage} alt="code for life logo" />
+        <Typography variant="h1">Example web page</Typography>
+        <Typography>
+          This is an example of how you can create a web page. This example
+          consumes the backend-template's API.
+        </Typography>
+        <Link to={paths.fruits._}>See fruits</Link>
+      </page.Section>
+    </page.Page>
+  )
+}
+
+export default Home
