@@ -51,6 +51,8 @@ const FruitDetail: FC<FruitDetailProps> = () => {
                 <forms.SubmitButton>Update fruit</forms.SubmitButton>
               </Stack>
             </forms.Form>
+          </pages.Section>
+          <pages.Section>
             <Link className="back-to" to={paths.fruits._}>
               fruit list
             </Link>
@@ -58,7 +60,7 @@ const FruitDetail: FC<FruitDetailProps> = () => {
         </pages.Page>
       )),
     onValidationSuccess: params => {
-      retrieveFruit(params.id)
+      retrieveFruit(params.id, true)
     },
     onValidationError: navigate => {
       navigate(paths.fruits._, {

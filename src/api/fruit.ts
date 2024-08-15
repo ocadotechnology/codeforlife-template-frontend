@@ -22,7 +22,7 @@ export type Fruit = Model<
   {
     name: string
     is_citrus: boolean
-    expires_on: Date
+    expires_on: string
   }
 >
 

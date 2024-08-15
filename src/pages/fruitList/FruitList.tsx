@@ -30,10 +30,10 @@ const FruitList: FC<FruitListProps> = () => {
         <TablePagination useLazyListQuery={useLazyListFruitsQuery}>
           {fruits =>
             fruits.map(fruit => (
-              <Stack direction="row" key={fruit.id}>
+              <Stack direction="row" key={fruit.id} gap={5}>
                 <Typography fontWeight="bold">{fruit.id}</Typography>
                 <Typography>
-                  : {fruit.name} ({fruit.expires_on.toDateString()})
+                  {fruit.name} ({fruit.expires_on})
                 </Typography>
                 <FormControlLabel
                   control={<Checkbox disabled checked={fruit.is_citrus} />}
