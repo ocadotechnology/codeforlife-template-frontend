@@ -1,4 +1,4 @@
-import * as page from "codeforlife/components/page"
+import * as pages from "codeforlife/components/page"
 import { type FC } from "react"
 import { Image } from "codeforlife/components"
 import { Link } from "codeforlife/components/router"
@@ -11,8 +11,8 @@ export interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
   return (
-    <page.Page>
-      <page.Section>
+    <pages.Page>
+      <pages.Section>
         <Image src={CflLogoImage} alt="code for life logo" />
         <Typography variant="h1">Example web page</Typography>
         <Typography>
@@ -20,8 +20,8 @@ const Home: FC<HomeProps> = () => {
           consumes the backend-template's API.
         </Typography>
         <Link to={paths.fruits._}>See fruits</Link>
-      </page.Section>
-    </page.Page>
+      </pages.Section>
+    </pages.Page>
   )
 }
 
