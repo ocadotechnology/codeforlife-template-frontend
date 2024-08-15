@@ -69,7 +69,7 @@ const fruitApi = api.injectEndpoints({
         url: buildUrl(fruitUrls.list, { search }),
         method: "GET",
       }),
-      providesTags: tagData("Fruit"),
+      providesTags: tagData("Fruit", { includeListTag: true }),
     }),
     createFruit: build.mutation<CreateFruitResult, CreateFruitArg>({
       query: body => ({
@@ -77,6 +77,7 @@ const fruitApi = api.injectEndpoints({
         method: "POST",
         body,
       }),
+      invalidatesTags: tagData("Fruit", { includeListTag: true }),
     }),
     updateFruit: build.mutation<UpdateFruitResult, UpdateFruitArg>({
       query: ({ id, ...body }) => ({
@@ -91,7 +92,7 @@ const fruitApi = api.injectEndpoints({
         url: buildUrl(fruitUrls.detail, { url: { id } }),
         method: "DELETE",
       }),
-      invalidatesTags: tagData("Fruit"),
+      invalidatesTags: tagData("Fruit", { includeListTag: true }),
     }),
   }),
 })

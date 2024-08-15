@@ -27,7 +27,10 @@ const FruitList: FC<FruitListProps> = () => {
   return (
     <pages.Page>
       <pages.Section>
-        <TablePagination useLazyListQuery={useLazyListFruitsQuery}>
+        <TablePagination
+          useLazyListQuery={useLazyListFruitsQuery}
+          preferCacheValue
+        >
           {fruits =>
             fruits.map(fruit => (
               <Stack direction="row" key={fruit.id} gap={5}>
