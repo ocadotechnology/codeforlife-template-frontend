@@ -13,13 +13,13 @@ const Home: FC<HomeProps> = () => {
   return (
     <pages.Page>
       <pages.Section>
-        <Image src={CflLogoImage} alt="code for life logo" />
+        <Image src={CflLogoImage} alt="code for life logo" maxWidth="200px" />
         <Typography variant="h1">Example web page</Typography>
         <Typography>
           This is an example of how you can create a web page. This example
           consumes the backend-template's API.
         </Typography>
-        <Link to={paths.fruits._}>See fruits</Link>
+        <Link to={paths.fruits._}>Fruit list</Link>
       </pages.Section>
     </pages.Page>
   )

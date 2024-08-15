@@ -1,9 +1,9 @@
 import * as forms from "codeforlife/components/form"
 import * as pages from "codeforlife/components/page"
 import * as yup from "yup"
+import { Stack, Typography } from "@mui/material"
 import { type FC } from "react"
 import { Link } from "codeforlife/components/router"
-import { Typography } from "@mui/material"
 import { handleQueryState } from "codeforlife/utils/api"
 import { submitForm } from "codeforlife/utils/form"
 import { useParamsRequired } from "codeforlife/hooks"
@@ -37,12 +37,19 @@ const FruitDetail: FC<FruitDetailProps> = () => {
                 },
               })}
             >
-              <forms.TextField name="name" schema={fruitNameSchema} />
-              <forms.CheckboxField
-                name="is_citrus"
-                formControlLabelProps={{ label: "Is Citrus" }}
-              />
-              <forms.SubmitButton>Update fruit</forms.SubmitButton>
+              <Stack>
+                <forms.TextField
+                  name="name"
+                  label="Name"
+                  placeholder="Enter the fruit's name"
+                  schema={fruitNameSchema}
+                />
+                <forms.CheckboxField
+                  name="is_citrus"
+                  formControlLabelProps={{ label: "Is Citrus" }}
+                />
+                <forms.SubmitButton>Update fruit</forms.SubmitButton>
+              </Stack>
             </forms.Form>
             <Link className="back-to" to={paths.fruits._}>
               fruit list

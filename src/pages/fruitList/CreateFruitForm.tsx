@@ -1,6 +1,6 @@
 import * as forms from "codeforlife/components/form"
+import { FormHelperText, Stack } from "@mui/material"
 import { type FC } from "react"
-import { FormHelperText } from "@mui/material"
 import { submitForm } from "codeforlife/utils/form"
 
 import { fruitNameSchema } from "../../app/schemas"
@@ -24,12 +24,20 @@ const CreateFruitForm: FC<CreateFruitFormProps> = () => {
           },
         })}
       >
-        <forms.TextField required name="name" schema={fruitNameSchema} />
-        <forms.CheckboxField
-          name="is_citrus"
-          formControlLabelProps={{ label: "Is Citrus" }}
-        />
-        <forms.SubmitButton>Create fruit</forms.SubmitButton>
+        <Stack>
+          <forms.TextField
+            required
+            name="name"
+            label="Name"
+            placeholder="Enter the fruit's name"
+            schema={fruitNameSchema}
+          />
+          <forms.CheckboxField
+            name="is_citrus"
+            formControlLabelProps={{ label: "Is Citrus" }}
+          />
+          <forms.SubmitButton>Create fruit</forms.SubmitButton>
+        </Stack>
       </forms.Form>
     </>
   )
