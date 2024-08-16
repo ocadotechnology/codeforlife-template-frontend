@@ -9,7 +9,7 @@ import tseslint from "typescript-eslint"
 
 // https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts
 export default tseslint.config(
-  { ignores: ["dist"] },
+  { ignores: ["dist", "**/*.d.ts"] },
   {
     settings: { react: { version: "18.3" } },
     extends: [
