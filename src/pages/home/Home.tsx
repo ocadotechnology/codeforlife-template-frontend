@@ -17,7 +17,7 @@ const Home: FC<HomeProps> = () => {
         <Typography variant="h1">Example web page</Typography>
         <Typography>
           This is an example of how you can create a web page. This example
-          consumes the backend-template's API.
+          consumes the backend-template&apos;s API.
         </Typography>
         <Link to={paths.fruits._}>Fruit list</Link>
       </pages.Section>

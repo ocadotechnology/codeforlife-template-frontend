@@ -49,7 +49,7 @@ const FruitList: FC<FruitListProps> = () => {
                 </LinkIconButton>
                 <IconButton
                   onClick={() => {
-                    destroyFruit(fruit.id)
+                    void destroyFruit(fruit.id)
                   }}
                 >
                   <DeleteIcon />

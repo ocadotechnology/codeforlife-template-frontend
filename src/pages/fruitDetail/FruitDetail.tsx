@@ -60,7 +60,7 @@ const FruitDetail: FC<FruitDetailProps> = () => {
         </pages.Page>
       )),
     onValidationSuccess: params => {
-      retrieveFruit(params.id, true)
+      void retrieveFruit(params.id, true)
     },
     onValidationError: navigate => {
       navigate(paths.fruits._, {
