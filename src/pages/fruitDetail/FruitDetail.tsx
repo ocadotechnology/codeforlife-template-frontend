@@ -12,7 +12,7 @@ import {
   useLazyRetrieveFruitQuery,
   useUpdateFruitMutation,
 } from "../../api/fruit"
-import { fruitNameSchema } from "../../app/schemas"
+import { FruitNameField } from "../../components"
 import { paths } from "../../routes"
 
 export interface FruitDetailProps {}
@@ -38,12 +38,7 @@ const FruitDetail: FC<FruitDetailProps> = () => {
               })}
             >
               <Stack>
-                <forms.TextField
-                  name="name"
-                  label="Name"
-                  placeholder="Enter the fruit's name"
-                  schema={fruitNameSchema}
-                />
+                <FruitNameField />
                 <forms.CheckboxField
                   name="is_citrus"
                   formControlLabelProps={{ label: "Is Citrus" }}

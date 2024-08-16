@@ -3,7 +3,7 @@ import { FormHelperText, Stack } from "@mui/material"
 import { type FC } from "react"
 import { submitForm } from "codeforlife/utils/form"
 
-import { fruitNameSchema } from "../../app/schemas"
+import { FruitNameField } from "../../components"
 import { useCreateFruitMutation } from "../../api/fruit"
 
 export interface CreateFruitFormProps {}
@@ -25,13 +25,7 @@ const CreateFruitForm: FC<CreateFruitFormProps> = () => {
         })}
       >
         <Stack>
-          <forms.TextField
-            required
-            name="name"
-            label="Name"
-            placeholder="Enter the fruit's name"
-            schema={fruitNameSchema}
-          />
+          <FruitNameField />
           <forms.CheckboxField
             name="is_citrus"
             formControlLabelProps={{ label: "Is Citrus" }}
