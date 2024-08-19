@@ -19,7 +19,7 @@
     },
     {
       "env": {
-        "SERVICE_NAME": "replace-me"
+        "VITE_SERVICE_NAME": "replace-me"
       },
       "name": "Vite Server",
       "preLaunchTask": "run",
