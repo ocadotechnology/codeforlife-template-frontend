@@ -5,7 +5,6 @@ import { Stack, Typography } from "@mui/material"
 import { type FC } from "react"
 import { Link } from "codeforlife/components/router"
 import { handleResultState } from "codeforlife/utils/api"
-import { submitForm } from "codeforlife/utils/form"
 import { useParamsRequired } from "codeforlife/hooks"
 
 import {
