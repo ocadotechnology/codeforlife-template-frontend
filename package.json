@@ -14,7 +14,7 @@
     "✅ Do add `devDependencies` that are unique to this service."
   ],
   "dependencies": {
-    "codeforlife": "github:ocadotechnology/codeforlife-package-javascript#package-javascript-72"
+    "codeforlife": "2.9.0"
   },
   "devDependencies": {
     "@codeforlife/workspace": "link:../configs/frontend"
