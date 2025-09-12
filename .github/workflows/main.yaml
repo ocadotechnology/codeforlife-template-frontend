@@ -9,7 +9,7 @@ on:
 
 jobs:
   main:
-    uses: ocadotechnology/codeforlife-workspace/.github/workflows/frontend.yaml@main
+    uses: ocadotechnology/codeforlife-workspace/.github/workflows/frontend.yaml@workspace-278 # TODO: set to @main
     secrets: inherit
     with:
       download-branch: workspace-278 # TODO: delete
